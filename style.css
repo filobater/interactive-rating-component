@@ -1,0 +1,166 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+
+  --orange: hsl(25, 97%, 53%) /* ### Neutral */;
+
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: #212832;
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  background-color: var(--very-dark-blue);
+  line-height: 1.7;
+  padding: 0 2rem;
+}
+
+.container {
+  max-width: 40rem;
+  background: var(--dark-blue);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  margin: auto;
+  margin-top: 14rem;
+  padding: 2.5rem;
+  border-radius: 2rem;
+}
+
+.card-star {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #27323f;
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.p-card {
+  color: var(--light-grey);
+  margin-bottom: 2rem;
+}
+
+.submit-rate {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  /* gap: 3rem; */
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.submit-rate input[type='radio'] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.submit-rate label {
+  background-color: #27323f;
+  color: var(--white);
+  width: 4.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-rate label:hover {
+  background-color: var(--orange);
+}
+
+.submit-rate input[type='radio']:focus + label {
+  background-color: var(--medium-grey);
+}
+.button-submit {
+  display: flex;
+}
+
+.submit-rate input[type='submit'] {
+  background: var(--orange);
+  border: 0;
+  border-radius: 50px;
+  padding: 1.5rem 1rem;
+  color: var(--white);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  letter-spacing: 3px;
+  flex: 1;
+}
+
+.submit-rate input[type='submit']:hover {
+  color: var(--orange);
+  background: var(--white);
+}
+
+.submitted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.thanks {
+  margin-bottom: 1rem;
+}
+
+.selected-rate {
+  background-color: hsl(213, 19%, 21%);
+  color: var(--orange);
+  text-align: center;
+  border-radius: 50px;
+  padding: 0.3rem 2rem;
+
+  margin: 2rem 0;
+}
+
+.attribution {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--light-grey);
+}
+.attribution a {
+  color: var(--orange);
+}
+
+.hidden {
+  display: none;
+}
